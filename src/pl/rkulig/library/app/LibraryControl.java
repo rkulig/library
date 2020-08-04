@@ -12,7 +12,9 @@ import pl.rkulig.library.model.Book;
 import pl.rkulig.library.model.Library;
 import pl.rkulig.library.model.Magazine;
 import pl.rkulig.library.model.Publication;
+import pl.rkulig.library.model.comparator.AlphabeticalTitleComparator;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 
 class LibraryControl {
@@ -104,9 +106,10 @@ class LibraryControl {
     }
 
     private void printBooks() {
-        Publication[] publications = library.getPublications();
+        Publication[] publications = getSortedPublications();
         printer.printBooks(publications);
     }
+
 
     private void addMagazine() {
         try {
@@ -120,8 +123,14 @@ class LibraryControl {
     }
 
     private void printMagazines() {
-        Publication[] publications = library.getPublications();
+        Publication[] publications = getSortedPublications();
         printer.printMagazines(publications);
+    }
+
+    private Publication[] getSortedPublications() {
+        Publication[] publications = library.getPublications();
+        Arrays.sort(publications, new AlphabeticalTitleComparator());
+        return publications;
     }
 
     private void deleteMagazine() {
