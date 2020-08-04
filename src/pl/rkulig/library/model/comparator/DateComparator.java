@@ -2,6 +2,7 @@ package pl.rkulig.library.model.comparator;
 
 import pl.rkulig.library.model.Publication;
 
+import java.time.Year;
 import java.util.Comparator;
 
 public class DateComparator implements Comparator<Publication> {
@@ -16,8 +17,8 @@ public class DateComparator implements Comparator<Publication> {
         if (p2 == null) {
             return -1;
         }
-        Integer i1 = p1.getYear();
-        Integer i2 = p2.getYear();
+        Year i1 = p1.getYear();
+        Year i2 = p2.getYear();
         return -i1.compareTo(i2);
     }
 }
