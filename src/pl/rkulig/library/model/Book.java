@@ -9,9 +9,7 @@ public class Book extends Publication {
     // Konstruktory
     public Book(String title, String author, int year, int pages, String publisher,
                 String isbn) {
-        setTitle(title);
-        setPublisher(publisher);
-        setYear(year);
+        super(title, publisher, year);
         this.pages = pages;
         this.author = author;
         this.isbn = isbn;

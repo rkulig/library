@@ -1,31 +1,37 @@
 package pl.rkulig.library.model;
 
-public class Publication {
-    private int year;
+class Publication {
     private String title;
     private String publisher;
+    private int year;
 
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
+    Publication(String title, String publisher, int year) {
+        this.title = title;
+        this.publisher = publisher;
         this.year = year;
     }
 
-    public String getTitle() {
+    int getYear() {
+        return year;
+    }
+
+    void setYear(int year) {
+        this.year = year;
+    }
+
+    String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
+    void setTitle(String title) {
         this.title = title;
     }
 
-    public String getPublisher() {
+    String getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
+    void setPublisher(String publisher) {
         this.publisher = publisher;
     }
 }
