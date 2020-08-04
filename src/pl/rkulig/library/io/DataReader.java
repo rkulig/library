@@ -1,6 +1,7 @@
 package pl.rkulig.library.io;
 
 import pl.rkulig.library.model.Book;
+import pl.rkulig.library.model.LibraryUser;
 import pl.rkulig.library.model.Magazine;
 
 import java.util.Scanner;
@@ -16,6 +17,17 @@ public class DataReader {
     public String getString() {
         return sc.nextLine();
     }
+
+    public LibraryUser createLibraryUser() {
+        printer.printLine("Imię");
+        String firstName = sc.nextLine();
+        printer.printLine("Nazwisko");
+        String lastName = sc.nextLine();
+        printer.printLine("Pesel");
+        String pesel = sc.nextLine();
+        return new LibraryUser(firstName, lastName, pesel);
+    }
+
 
     public void close() {
         sc.close();
