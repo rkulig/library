@@ -30,6 +30,8 @@ public abstract class Publication  implements Serializable {
         this.title = title;
     }
 
+    public abstract String toCsv();
+
     String getPublisher() {
         return publisher;
     }
