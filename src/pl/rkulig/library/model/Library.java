@@ -1,6 +1,8 @@
 package pl.rkulig.library.model;
 
-public class Library {
+import java.io.Serializable;
+
+public class Library implements Serializable {
 
     private static final int MAX_PUBLICATONS = 2000;
     private int publicationsNumber;
