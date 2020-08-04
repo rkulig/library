@@ -8,10 +8,12 @@ import java.util.*;
 
 public class Library implements Serializable {
 
-    //zmieniony typ
     private Map<String, Publication> publications = new HashMap<>();
-    //dodane
     private Map<String, LibraryUser> users = new HashMap<>();
+
+    public Optional<Publication> findPublicationByTitle(String title) {
+        return Optional.ofNullable(publications.get(title));
+    }
 
     //zmieniony typ zwracany
     public Map<String, Publication> getPublications() {
