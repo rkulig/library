@@ -1,2 +1,1 @@
-Biblioteka pozwala dodawać/usuwać do biblioteki książki, magazyny, użytkowników, wyszukiwać je. 
-Aplikacja napisana  w Javie SE, uruchomiana w konsoli, dane są zapisywane do pliku.
+Aplikacja napisana jest w Javie SE i jest systemem zarządzania bibliąteka. Interfejs użytkownika jest odbsługiwany z konsoli. Dane są zapisywane do pliku. Można dodawać , usuwać , wyszukiwać zarówno użytkowników jak książki lub magazyny.
